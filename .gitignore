@@ -4,4 +4,4 @@
 !.gitignore
 !config.example.json
 !.gitsubmodules
-
+!README.md
