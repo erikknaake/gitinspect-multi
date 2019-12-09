@@ -1,0 +1,4 @@
+[submodule "gitinspector"]
+	path = gitinspector
+	url = git@github.com:ejwa/gitinspector.git
+	branch = master

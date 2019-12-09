@@ -1,0 +1,49 @@
+{
+	"repos": [
+		{
+			"url": "ssh://git@127.0.0.1:8080/abcd/relay.git",
+			"dir": "./chive-relay",
+			"branch": "development",
+			"name": "relay"
+		},
+		{
+			"url": "ssh://git@127.0.0.1:8080/abcd/wrapper.git",
+			"dir": "./chive-wrapper",
+			"branch": "development",
+			"name": "wrapper"
+		},
+		{
+			"url": "ssh://git@127.0.0.1:8080/abcd/client-mobile.git",
+			"dir": "./chive-client-mobile",
+			"branch": "development",
+			"name": "mobile"
+		},
+		{
+			"url": "ssh://git@127.0.0.1:8080/abcd/client-desktop.git",
+			"dir": "./chive-client-desktop",
+			"branch": "development",
+			"name": "desktop"
+		}
+	],
+	"extensions": [
+		"ts",
+		"js",
+		"json",
+		"html",
+		"css",
+		"scss",
+		"svg",
+		"png",
+		"jpg",
+		"jpeg",
+		"md",
+		"java",
+		"fxml",
+		"properties",
+		"Dockerfile",
+		"yml",
+		"gitignore",
+		"gitsubmodules"
+	],
+	"format": "html"
+}
