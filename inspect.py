@@ -32,7 +32,7 @@ def updateRepos(repos):
 		updateBranch(repo, doPull)
 
 def runGitInspect(format, extensions, folder, outputLocation):
-	command = ["python", "./gitinspector/gitinspector.py", "-F", format, "-f", extensions, folder]
+	command = ["python2.7", "./gitinspector/gitinspector.py", "-F", format, "-f", extensions, folder]
 	print (command)
 	with open(outputLocation, "w") as outfile:
 		subprocess.call(command, stdout = outfile)
