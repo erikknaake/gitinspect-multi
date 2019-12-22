@@ -45,5 +45,6 @@
 		"gitignore",
 		"gitsubmodules"
 	],
-	"format": "html"
+	"format": "html",
+	"exclude": "package-lock.json"
 }

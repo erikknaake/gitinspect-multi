@@ -31,8 +31,8 @@ def updateRepos(repos):
 			git(["clone", repo["url"]])
 		updateBranch(repo, doPull)
 
-def runGitInspect(format, extensions, folder, outputLocation):
-	command = ["python2.7", "./gitinspector/gitinspector.py", "-F", format, "-f", extensions, folder]
+def runGitInspect(format, extensions, folder, outputLocation, exclude):
+	command = ["python2.7", "./gitinspector/gitinspector.py", "-F", format, "-f", extensions, folder, "-x", exclude]
 	print (command)
 	with open(outputLocation, "w") as outfile:
 		subprocess.call(command, stdout = outfile)
@@ -41,7 +41,7 @@ def listToCommaSeperatedString(list):
 	return ','.join(list)
 
 def runInspectForRepo(config, repo):
-	runGitInspect(config["format"], listToCommaSeperatedString(config["extensions"]), repo["dir"], "./out_" + repo["name"] + ".html")
+	runGitInspect(config["format"], listToCommaSeperatedString(config["extensions"]), repo["dir"], "./out_" + repo["name"] + ".html", config["exclude"])
 
 def runInspect(config):
 	for repo in config["repos"]:
