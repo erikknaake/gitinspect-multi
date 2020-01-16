@@ -18,9 +18,9 @@ def readConfig():
 		return json.load(file)
 
 def updateBranch(repo, didPull):
+	gitInDir(repo["dir"], "fetch")
 	gitInDir(repo["dir"], "checkout", repo["branch"])
 	if not didPull:
-		gitInDir(repo["dir"], "fetch")
 		gitInDir(repo["dir"], "pull")
 
 def updateRepos(repos):
